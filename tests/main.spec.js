@@ -1,7 +1,7 @@
-const { ConverseTesting, user, bot  } = require('newbot/testing')
-const { train } = require('newbot/packages/train')
-const { LangEn } = require('@nlpjs/lang-en')
-const mainSkill = require('../src/bot/main')
+import { ConverseTesting, user, bot } from "newbot/testing";
+import { train } from "newbot/packages/train";
+import { LangEn } from "@nlpjs/lang-en";
+import mainSkill from "../src/bot/main";
 
 describe('My own test', () => {
     let converse, userConverse, model

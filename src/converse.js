@@ -1,7 +1,7 @@
-const { NewBot } = require('newbot')
-const { LangEn } = require('@nlpjs/lang-en')
-const { train } = require('newbot/packages/train')
-const mainSkill = require('./bot/main')
+import { NewBot } from "newbot";
+import { LangEn } from "@nlpjs/lang-en";
+import { train } from "newbot/packages/train";
+import mainSkill from "./bot/main";
 
 const converse = new NewBot(mainSkill)
 
@@ -12,7 +12,7 @@ train(converse, [LangEn]).then(model => {
     console.log('Bot is trained !')
 })
 
-module.exports = (io) => {
+export default (io) => {
     io.on('connection', (socket) => {
         socket.on('userText', (text) => {
             converse.exec(text, socket.id, {

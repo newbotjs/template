@@ -1,0 +1,22 @@
+@Event('start')
+start() {
+    > What is your name ?
+    Prompt()
+    > Welcome { :text }
+    
+    @Format('quickReplies', ['Fine', 'Sad'])
+    > How are you doing?
+}
+
+@Intent('greeting', [
+    'hello',
+    'thanks'
+])
+greeting() {
+    > Hey !
+}
+
+@Event('nothing')
+nothing() {
+    > What ?
+}

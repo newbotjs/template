@@ -1,30 +1,8 @@
-const formats = require('newbot-formats')
+import code from './main.converse'
+import formats from "newbot-formats";
 
-module.exports = {
-    code: `
-        @Event('start')
-        start() {
-            > What is your name ?
-            Prompt()
-            > Welcome { :text }
-            
-            @Format('quickReplies', ['Fine', 'Sad'])
-            > How are you doing?
-        }
-
-        @Intent('greeting', [
-            'hello',
-            'thanks'
-        ])
-        greeting() {
-            > Hey !
-        }
-
-        @Event('nothing')
-        nothing() {
-            > What ?
-        }
-    `,
+export default {
+    code,
     skills: {
         formats
     },

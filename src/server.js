@@ -1,8 +1,8 @@
-const http = require('http')
-const express = require('express')
-const bodyParser = require('body-parser')
-const { Server } = require('socket.io')
-const converse = require('./converse')
+import http from 'http'
+import express from 'express'
+import bodyParser from 'body-parser'
+import { Server } from 'socket.io'
+import converse from './converse'
 
 const PORT = process.env.PORT || 3000
 
@@ -13,7 +13,7 @@ const io = new Server(server, {
 })
 
 app.use(bodyParser.json())
-app.use('/', express.static(__dirname + '/client'))
+app.use('/', express.static(__dirname + '/../../src/client'))
 
 converse(io)
 
