@@ -1,0 +1,27 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.min.js"></script>
+
+<div>
+  <input type="text" id="input" /> <button id="button">Ok</button>
+  <ul id="messages"></ul>
+</div>
+
+<script>
+  var socket = io.connect();
+
+  const button = document.getElementById("button");
+  const input = document.getElementById("input");
+  const messages = document.getElementById("messages");
+
+  button.addEventListener("click", () => {
+    socket.emit("userText", input.value);
+    input.value = ''
+  });
+
+  socket.on("botReply", function(str) {
+    const li = document.createElement("li");
+    const pre = document.createElement("pre");
+    pre.textContent = JSON.stringify(str);
+    li.appendChild(pre)
+    messages.appendChild(li);
+  });
+</script>

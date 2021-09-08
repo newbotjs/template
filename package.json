@@ -1,0 +1,25 @@
+{
+  "name": "newbot-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nlpjs/lang-en": "^4.22.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "newbot": "^0.7.1",
+    "newbot-formats": "^1.7.1",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "nodemon": "^2.0.12"
+  }
+}
