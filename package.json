@@ -14,7 +14,7 @@
     "@nlpjs/lang-en": "^4.22.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "newbot": "^1.0.0",
+    "newbot": "^1.1.0",
     "newbot-formats": "^1.7.1",
     "socket.io": "^4.2.0"
   },
